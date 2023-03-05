@@ -51,12 +51,10 @@ const list = {
 
 const findItem = (object, index) => Object.keys(object).filter(item => item.toString() == index);
 
-arr.forEach(item => {
-    if(list[findItem(list, index)]=='Não feito') print('Multa')
-    else if(list[findItem(list, index)]=='Em progresso') print('Avaliação de progresso')
-    else print('Feito')
-});
-
-
 //TODO: Print no console "Multa", "Avaliação de progresso" ou "Não multar" dependendo do valor 
 //de cada uma das chaves a serem verificadas da lista arr
+arr.forEach(item => {
+    if(list[findItem(list, item)]=='Não feito') print('Multa')
+    else if(list[findItem(list, item)]=='Em progresso') print('Avaliação de progresso')
+    else print(' Não multar')
+});
